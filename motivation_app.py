@@ -2,7 +2,7 @@ import streamlit as st
 from fetch_motivation import mood
 
 
-st.title("Classy MoodResidue Motivator")
+st.title("Classy MoodResidue Motivator by Kavya_Shah")
 
 user_name = st.text_input("Your Name" , placeholder="Type here...." ) #label,placeholder
 
@@ -13,7 +13,7 @@ user_mood = st.selectbox(
                  "😂 Happy Always",
                  "😔 Sorry to hear",
                  "😩 Stressed",
-                 "🥱 Tired and sleepy"
+                 "🥱 Tired and sleepy."
               ])
 
 if st.button("Lets have a talk 😊"):
@@ -25,4 +25,5 @@ if st.button("Lets have a talk 😊"):
     
     else:
         st.warning("Please enter your name first!")
+
 
