@@ -1,12 +1,14 @@
 import os 
 import requests
-from dotenv import load_dotenv
+import streamlit as st
 
-load_dotenv()
 
-gen_ai_key = os.getenv("GEMINI_API_KEY")
+
+
 
 def mood(user_mood,user_name):
+
+    gen_ai_key = st.secrets["GEMINI_API_KEY"]
 
     url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={gen_ai_key}"
 
@@ -51,6 +53,7 @@ def mood(user_mood,user_name):
     else:
 
         return "Oops!"
+
 
 
 
